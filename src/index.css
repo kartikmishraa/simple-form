@@ -2,12 +2,15 @@
   margin: 0;
 }
 
-/* Header */
-header {
+.container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
 
+/* Header */
+header {
   margin-top: 60px;
 }
 
@@ -16,4 +19,31 @@ header h1 {
   border-bottom: 2px solid black;
 
   padding: 25px 0px;
+}
+
+/* Main */
+main {
+  margin-top: 60px;
+}
+
+main form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  /* padding: 10px; */
+  height: 30px;
+  width: 300px;
+}
+
+select {
+  height: 30px;
+  width: 150px;
+}
+
+button {
+  height: 50px;
+  border: 1px solid;
+  border-radius: 20px;
 }
