@@ -1,6 +1,7 @@
 // Main component
 
 import React, { useState } from "react";
+import db from "../firebase";
 
 const Main = () => {
   const [inputs, setInputs] = useState({});
@@ -15,7 +16,14 @@ const Main = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     //alert(`${temp}`);
+    db.collection("form-data")
+      .add(inputs)
+      .then(() => {
+        alert(`data sent to firestore`);
+        setInputs({});
+      });
   };
+
   return (
     <main>
       <form onSubmit={handleSubmit}>
