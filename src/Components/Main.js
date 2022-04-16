@@ -4,8 +4,10 @@ import React, { useState } from "react";
 import db from "../firebase";
 
 const Main = () => {
+  // State variable to hold inputs to be sent to database
   const [inputs, setInputs] = useState({});
 
+  // function to update state with input fields
   const handleChange = (event) => {
     const name = event.target.name;
     const value = event.target.value;
@@ -13,9 +15,9 @@ const Main = () => {
     setInputs((values) => ({ ...values, [name]: value }));
   };
 
+  // function to handle Submit button
   const handleSubmit = (event) => {
     event.preventDefault();
-    //alert(`${temp}`);
     db.collection("form-data")
       .add(inputs)
       .then(() => {
