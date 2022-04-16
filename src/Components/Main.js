@@ -1,24 +1,62 @@
 // Main component
 
-import React from "react";
+import React, { useState } from "react";
 
 const Main = () => {
+  const [inputs, setInputs] = useState({});
+
+  const handleChange = (event) => {
+    const name = event.target.name;
+    const value = event.target.value;
+
+    setInputs((values) => ({ ...values, [name]: value }));
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    //alert(`${temp}`);
+  };
   return (
     <main>
-      <form>
+      <form onSubmit={handleSubmit}>
         <label>Full Name: </label>
-        <input type="text" id="fname" placeholder="Your Name"></input>
+        <input
+          type="text"
+          name="fname"
+          value={inputs.fname}
+          placeholder="Your Name"
+          onChange={handleChange}
+          required
+        />
         <br />
         <label>Email: </label>
-        <input type="text" id="email" placeholder="Your Email"></input>
+        <input
+          name="email"
+          type="text"
+          value={inputs.email}
+          placeholder="Your Email"
+          onChange={handleChange}
+          required
+        />
         <br />
-        <label id="age">Age: </label>
-        <input type={"number"} min="1" max="140" placeholder="Ex. 12"></input>
+        <label>Age: </label>
+        <input
+          name="age"
+          type="number"
+          min="1"
+          max="140"
+          placeholder="Ex. 12"
+          onChange={handleChange}
+          required
+        />
         <br />
         <div className="form--sub">
           <span>
             <label>Gender: </label>
-            <select id="gender">
+            <select name="gender" onChange={handleChange} required>
+              <option value="Select" selected>
+                Select
+              </option>
               <option value="Male">Male</option>
               <option value="Female">Female</option>
               <option value="Other">Other</option>
