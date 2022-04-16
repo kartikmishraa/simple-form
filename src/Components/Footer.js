@@ -3,7 +3,9 @@
 const Footer = () => {
   return (
     <footer>
-      <p>Made with ❤ by Kartik</p>
+      <p>
+        Made with ❤ by <em>Kartik</em>
+      </p>
     </footer>
   );
 };
