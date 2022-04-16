@@ -1,5 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;400;600;700&display=swap");
+
 * {
   margin: 0;
+  font-family: "Inter", sans-serif;
 }
 
 .container {
@@ -7,11 +10,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 /* Header */
 header {
-  margin-top: 60px;
+  margin-top: 40px;
+  font-weight: 700;
 }
 
 header h1 {
@@ -23,7 +28,9 @@ header h1 {
 
 /* Main */
 main {
-  margin-top: 60px;
+  margin-top: 50px;
+  font-weight: 600;
+  width: auto;
 }
 
 main form {
@@ -31,8 +38,12 @@ main form {
   flex-direction: column;
 }
 
+label {
+  margin-bottom: 5px;
+}
+
 input {
-  /* padding: 10px; */
+  padding: 10px;
   height: 30px;
   width: 300px;
 }
@@ -43,7 +54,12 @@ select {
 }
 
 button {
-  height: 50px;
   border: 1px solid;
   border-radius: 20px;
+  width: 100px;
+}
+
+.form--sub {
+  display: flex;
+  justify-content: space-between;
 }

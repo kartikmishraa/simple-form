@@ -15,15 +15,17 @@ const Main = () => {
         <label id="age">Age: </label>
         <input type={"number"} min="1" max="140" placeholder="Ex. 12"></input>
         <br />
-        <label>Gender: </label>
-        <select id="gender">
-          <option value="Male">Male</option>
-          <option value="Female">Female</option>
-          <option value="Other">Other</option>
-        </select>
-        <br />
-        <br />
-        <button>Submit Details</button>
+        <div className="form--sub">
+          <span>
+            <label>Gender: </label>
+            <select id="gender">
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Other">Other</option>
+            </select>
+          </span>
+          <button>SUBMIT</button>
+        </div>
       </form>
     </main>
   );
