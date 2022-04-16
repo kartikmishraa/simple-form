@@ -1,3 +1,19 @@
 * {
   margin: 0;
 }
+
+/* Header */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 60px;
+}
+
+header h1 {
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+
+  padding: 25px 0px;
+}
