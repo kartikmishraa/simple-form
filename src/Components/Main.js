@@ -31,8 +31,9 @@ const Main = () => {
       <form onSubmit={handleSubmit}>
         <label>Full Name: </label>
         <input
-          type="text"
+          className="field"
           name="fname"
+          type="text"
           value={inputs.fname}
           placeholder="Your Name"
           onChange={handleChange}
@@ -41,8 +42,9 @@ const Main = () => {
         <br />
         <label>Email: </label>
         <input
+          className="field"
           name="email"
-          type="text"
+          type="email"
           value={inputs.email}
           placeholder="Your Email"
           onChange={handleChange}
@@ -51,6 +53,7 @@ const Main = () => {
         <br />
         <label>Age: </label>
         <input
+          className="field"
           name="age"
           type="number"
           min="1"
@@ -60,7 +63,7 @@ const Main = () => {
           required
         />
         <br />
-        <div className="form--sub">
+        <span className="form--sub">
           <span>
             <label>Gender: </label>
             <select name="gender" onChange={handleChange} required>
@@ -72,8 +75,9 @@ const Main = () => {
               <option value="Other">Other</option>
             </select>
           </span>
-          <button>SUBMIT</button>
-        </div>
+          <button className="btn">SUBMIT</button>
+        </span>
+        <input type="reset" className="btn" id="reset-btn" />
       </form>
     </main>
   );
