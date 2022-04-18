@@ -7,6 +7,11 @@
   font-family: "Inter", sans-serif;
 }
 
+:root {
+  --primary-clr: #fff;
+  --secondary-clr: #001e6c;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -21,12 +26,12 @@
 header {
   margin-top: 40px;
   font-weight: 700;
-  color: #001e6c;
+  color: var(--secondary-clr);
 }
 
 header h1 {
-  border-top: 2px solid #001e6c;
-  border-bottom: 2px solid #001e6c;
+  border-top: 2px solid var(--secondary-clr);
+  border-bottom: 2px solid var(--secondary-clr);
 
   padding: 25px 0px;
 }
@@ -35,7 +40,7 @@ header h1 {
 /* Main */
 main {
   font-weight: 600;
-  color: #001e6c;
+  color: var(--secondary-clr);
 }
 
 main form {
@@ -60,11 +65,20 @@ select {
 }
 
 .btn {
-  background: #001e6c;
-  color: white;
+  background: var(--secondary-clr);
+  color: var(--primary-clr);
   border: 2px solid;
   border-radius: 20px;
   width: 100px;
+  font-weight: 700;
+}
+.btn:hover {
+  background: var(--primary-clr);
+  color: var(--secondary-clr);
+}
+.btn:active {
+  color: var(--primary-clr);
+  background: var(--secondary-clr);
 }
 
 .form--sub {
