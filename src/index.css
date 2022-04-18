@@ -57,6 +57,14 @@ label {
   height: 30px;
   width: 300px;
   border: 1px solid blue;
+
+  box-shadow: 3px 3px;
+}
+.field:hover {
+  border: 2px solid blue;
+}
+.field:active {
+  font-weight: 700;
 }
 
 select {
