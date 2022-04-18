@@ -78,7 +78,6 @@ const Main = () => {
           <button className="btn">SUBMIT</button>
         </span>
         <input type="reset" className="btn" id="reset-btn" />
-        <button className="btn">Helo</button>
       </form>
     </main>
   );
