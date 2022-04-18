@@ -15,7 +15,7 @@ const Main = () => {
     setInputs((values) => ({ ...values, [name]: value }));
   };
 
-  // function to handle Submit button
+  // function to handle Submit
   const handleSubmit = (event) => {
     event.preventDefault();
     db.collection("form-data")
@@ -78,6 +78,7 @@ const Main = () => {
           <button className="btn">SUBMIT</button>
         </span>
         <input type="reset" className="btn" id="reset-btn" />
+        <button className="btn">Helo</button>
       </form>
     </main>
   );
