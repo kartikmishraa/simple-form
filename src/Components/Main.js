@@ -66,10 +66,7 @@ const Main = () => {
         <span className="form--sub">
           <span>
             <label>Gender: </label>
-            <select name="gender" onChange={handleChange} required>
-              <option value="Select" selected>
-                Select
-              </option>
+            <select name="gender" value="Male" onChange={handleChange} required>
               <option value="Male">Male</option>
               <option value="Female">Female</option>
               <option value="Other">Other</option>
