@@ -17,13 +17,17 @@ const Main = () => {
 
   // function to handle Submit
   const handleSubmit = (event) => {
-    event.preventDefault();
-    db.collection("form-data")
-      .add(inputs)
-      .then(() => {
-        alert(`data sent to firestore`);
-        setInputs({});
-      });
+    try {
+      event.preventDefault();
+      db.collection("form-data") // <---------------- CHECK THIS PIECE OF CODE
+        .add(inputs)
+        .then(() => {
+          alert(`data sent to firestore`);
+          setInputs({});
+        });
+    } catch (error) {
+      alert(error);
+    }
   };
 
   return (
