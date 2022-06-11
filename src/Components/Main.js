@@ -26,7 +26,7 @@ const Main = () => {
           setInputs({});
         });
     } catch (error) {
-      alert(error);
+      console.log(error);
     }
   };
 
@@ -38,7 +38,7 @@ const Main = () => {
           className="field"
           name="fname"
           type="text"
-          value={inputs.fname}
+          value={inputs.fname || ""}
           placeholder="Your Name"
           onChange={handleChange}
           required
@@ -49,7 +49,7 @@ const Main = () => {
           className="field"
           name="email"
           type="email"
-          value={inputs.email}
+          value={inputs.email || ""}
           placeholder="Your Email"
           onChange={handleChange}
           required
@@ -70,7 +70,7 @@ const Main = () => {
         <span className="form--sub">
           <span>
             <label>Gender: </label>
-            <select name="gender" value="Male" onChange={handleChange} required>
+            <select name="gender" onChange={handleChange} required>
               <option value="Male">Male</option>
               <option value="Female">Female</option>
               <option value="Other">Other</option>
