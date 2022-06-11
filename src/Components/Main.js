@@ -16,10 +16,11 @@ const Main = () => {
   };
 
   // function to handle Submit
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     try {
       event.preventDefault();
-      db.collection("form-data") // <---------------- CHECK THIS PIECE OF CODE
+      await db
+        .collection("form-data")
         .add(inputs)
         .then(() => {
           alert(`data sent to firestore`);
